@@ -20,7 +20,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div id="main">
         <Todo todos={todos} addTodo={addTodo}  />
         <div className="underline"></div>
         <Count count={count} setCount={setCount}/>
