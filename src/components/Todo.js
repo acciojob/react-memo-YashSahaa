@@ -8,7 +8,7 @@ const Todo = ({todos,addTodo})=>{
               {
                 todos.map((todo,index)=>{
                   return(
-                    <li key={index}>
+                    <li key={index} id={"todo-"+index}>
                     {todo}
                     </li>
                   ) 

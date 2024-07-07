@@ -13,7 +13,7 @@ const Count = ({count,setCount}) => {
         {"Count : "+count}
         <button onClick={()=>setCount(count+1)}>+</button>
         <h1>Expensive Calculation</h1>
-        <div>{expensiveCalculation}</div>
+        <div id="calc">{expensiveCalculation}</div>
       </div>
     )
   }
