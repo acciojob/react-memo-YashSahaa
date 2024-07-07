@@ -1,36 +1,23 @@
-import React, { useState } from "react";
-import './../styles/App.css';
-import Todo from "./Todo";
-import Count from "./Count";
-import Skill from "./Skill";
-
+import React from "react";
+import { useState } from "react";
+import Todos from "./Todos";
+import Counter from "./Counter";
+import ReactMemo from "./ReactMemo";
 const App = () => {
-
-  const [todos, setTodos] = useState([]);
-  const [inputValue, setInputValue] = useState('');
-  const [skills, setSkills] = useState([]);
-  const [count, setCount] = useState(0);
-
-  const addTodo = ()=>{
-    setTodos([...todos,"New Todo"]);
-  }
-  const addSkills = ()=>{
-    setSkills([...skills,inputValue]);
-    setInputValue("");
-  }
-
+    const [dataObj, setDataObj] = useState({
+        todoArr: [],
+        count: 0,
+        skillsArr: []
+    })
   return (
     <div id="main">
-        <Todo todos={todos} addTodo={addTodo}  />
-        <div className="underline"></div>
-        <Count count={count} setCount={setCount}/>
-        <div className="underline"></div>
-        <Skill skills={skills} addSkills={addSkills} inputValue={inputValue} setInputValue={setInputValue}/>
-        <div className="underline"></div>
+        <h1>React.useMemo</h1>
+        <Todos dataObj={dataObj} setDataObj={setDataObj} /><hr />
+        <Counter dataObj={dataObj} setDataObj={setDataObj} /><hr /><hr />
+        <ReactMemo dataObj={dataObj} setDataObj={setDataObj} />
     </div>
-  )
-}
-
+  );
+};
 export default App;
 
 
