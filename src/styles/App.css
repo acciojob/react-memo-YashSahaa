@@ -1,12 +1,15 @@
 h1 {
     color: #27aedb;
-    text-align: center;
     }
     
 
 button{
     color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+}
+
+.underline{
+    color: black;
+    width: 100%;
+    border: 2px solid black;
+    margin: 10px 0px;
 }
